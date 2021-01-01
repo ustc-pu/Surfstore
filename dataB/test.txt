@@ -1,0 +1,5 @@
+I am file B.
+Version2, B
+Version4, B//re-create
+Version5, A
+Version6, B
