@@ -1,5 +1,12 @@
 # Surfstore
 
+Surfstore is a cloud-based file storage service(similar to Dropbox). Multiple clients can sync files from and to the cloud.
+
+The SurfStore service is composed of two services:
+- **BlockStore**: The content of each file in SurfStore is divided up into chunks, or blocks, each of which has a unique identifier. This service stores these blocks, and when given an identifier, retrieves and returns the appropriate block.
+
+- **MetadataStore**: The MetadataStore service holds the mapping of filenames to hashes of these blocks (and versions).
+
 This is the starter code for Module 3: Surfstore.  Before you get started, make
 sure you understand the following 2 things about Go. (These will also be
 covered in class and in discussions)
@@ -10,6 +17,7 @@ covered in class and in discussions)
 
 2. RPC: You should know how to write RPC servers and clients in Go. The [online documentation](https://golang.org/pkg/net/rpc/) of the *rpc* package is a good resource. 
 
+<!---
 ## Data Types
 
 Recall from the module write-up the following things:
@@ -68,6 +76,7 @@ type Surfstore interface {
 }
 ```
 
+
 ## Server
 
 `BlockStore.go` provides a skeleton implementation of the `BlockStoreInterface`
@@ -104,6 +113,7 @@ func ClientSync(client RPCClient) {
 	panic("todo")
 }
 ```
+--->
 
 ## Setup
 
